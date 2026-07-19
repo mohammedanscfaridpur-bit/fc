@@ -10,7 +10,7 @@ export default async function AdminCommitteePage() {
   if (!session) redirect("/admin/login");
 
   const rows = await prisma.committeeMember.findMany({
-    orderBy: resourceConfigs.committee.defaultOrderBy,
+    orderBy: resourceConfigs.committee!.defaultOrderBy,
   });
 
   return (
