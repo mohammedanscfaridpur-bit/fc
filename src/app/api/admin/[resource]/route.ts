@@ -35,7 +35,8 @@ export async function POST(
   if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
   const { resource } = await params;
-  const config = resourceConfigs[resource];
+  const config =
+  resourceConfigs[resource as keyof typeof resourceConfigs];
   if (!config) return NextResponse.json({ error: "Unknown resource" }, { status: 404 });
 
   const body = await req.json().catch(() => ({}));
