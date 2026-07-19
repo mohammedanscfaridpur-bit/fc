@@ -1,0 +1,50 @@
+{
+  "site": {
+    "name": "Mohammeda Sporting Club",
+    "location": "Faridpur",
+    "founded": "Established 1936",
+    "tagline": "A century of pride, on and off the field."
+  },
+  "nav": {
+    "home": "Home",
+    "history": "History",
+    "activities": "Activities",
+    "achievements": "Achievements",
+    "management": "Management",
+    "executiveCommittee": "Executive Committee",
+    "formerPresidents": "Former Presidents",
+    "formerSecretaries": "Former Secretaries",
+    "lifeMembers": "Life Members",
+    "gallery": "Gallery",
+    "events": "Events",
+    "news": "News",
+    "membership": "Membership",
+    "sponsors": "Sponsors",
+    "contact": "Contact"
+  },
+  "common": {
+    "readMore": "Read more",
+    "viewAll": "View all",
+    "search": "Search",
+    "searchPlaceholder": "Search the site...",
+    "loading": "Loading...",
+    "noResults": "No results found.",
+    "language": "Language",
+    "darkMode": "Dark mode",
+    "applyNow": "Apply for membership",
+    "contactUs": "Contact us",
+    "submit": "Submit",
+    "since": "Since"
+  },
+  "footer": {
+    "quickLinks": "Quick links",
+    "followUs": "Follow us",
+    "address": "Address",
+    "rightsReserved": "All rights reserved."
+  },
+  "admin": {
+    "login": "Admin login",
+    "dashboard": "Dashboard",
+    "logout": "Log out"
+  }
+}

@@ -1,0 +1,46 @@
+import type { MetadataRoute } from "next";
+import { prisma } from "@/lib/db";
+
+const staticPaths = [
+  "",
+  "history",
+  "activities",
+  "achievements",
+  "management",
+  "executive-committee",
+  "former-presidents",
+  "former-secretaries",
+  "life-members",
+  "gallery",
+  "events",
+  "news",
+  "membership",
+  "sponsors",
+  "contact",
+];
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const base = process.env.NEXT_PUBLIC_SITE_URL || "https://mohammeda-sc-faridpur.com";
+  const locales = ["en", "bn"];
+
+  const staticEntries: MetadataRoute.Sitemap = locales.flatMap((locale) =>
+    staticPaths.map((p) => ({
+      url: `${base}/${locale}${p ? `/${p}` : ""}`,
+      lastModified: new Date(),
+    })),
+  );
+
+  const posts = await prisma.newsPost.findMany({
+    where: { isPublished: true },
+    select: { slug: true, updatedAt: true },
+  });
+
+  const newsEntries: MetadataRoute.Sitemap = locales.flatMap((locale) =>
+    posts.map((post) => ({
+      url: `${base}/${locale}/news/${post.slug}`,
+      lastModified: post.updatedAt,
+    })),
+  );
+
+  return [...staticEntries, ...newsEntries];
+}

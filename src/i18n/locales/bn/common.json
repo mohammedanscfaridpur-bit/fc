@@ -1,0 +1,50 @@
+{
+  "site": {
+    "name": "মোহামেডান স্পোর্টিং ক্লাব",
+    "location": "ফরিদপুর",
+    "founded": "প্রতিষ্ঠিত ১৯৩৬",
+    "tagline": "মাঠে ও মাঠের বাইরে, এক শতাব্দীর গৌরব।"
+  },
+  "nav": {
+    "home": "হোম",
+    "history": "ইতিহাস",
+    "activities": "কার্যক্রম",
+    "achievements": "অর্জন",
+    "management": "পরিচালনা",
+    "executiveCommittee": "কার্যনির্বাহী কমিটি",
+    "formerPresidents": "সাবেক সভাপতিবৃন্দ",
+    "formerSecretaries": "সাবেক সম্পাদকবৃন্দ",
+    "lifeMembers": "আজীবন সদস্য",
+    "gallery": "গ্যালারি",
+    "events": "ইভেন্ট",
+    "news": "সংবাদ",
+    "membership": "সদস্যপদ",
+    "sponsors": "স্পনসর",
+    "contact": "যোগাযোগ"
+  },
+  "common": {
+    "readMore": "আরও পড়ুন",
+    "viewAll": "সব দেখুন",
+    "search": "খুঁজুন",
+    "searchPlaceholder": "সাইটে খুঁজুন...",
+    "loading": "লোড হচ্ছে...",
+    "noResults": "কোনো ফলাফল পাওয়া যায়নি।",
+    "language": "ভাষা",
+    "darkMode": "ডার্ক মোড",
+    "applyNow": "সদস্যপদের জন্য আবেদন করুন",
+    "contactUs": "যোগাযোগ করুন",
+    "submit": "জমা দিন",
+    "since": "সাল থেকে"
+  },
+  "footer": {
+    "quickLinks": "প্রয়োজনীয় লিংক",
+    "followUs": "আমাদের অনুসরণ করুন",
+    "address": "ঠিকানা",
+    "rightsReserved": "সর্বস্বত্ব সংরক্ষিত।"
+  },
+  "admin": {
+    "login": "অ্যাডমিন লগইন",
+    "dashboard": "ড্যাশবোর্ড",
+    "logout": "লগ আউট"
+  }
+}

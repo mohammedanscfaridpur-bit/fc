@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+@layer base {
+  body {
+    @apply bg-cream font-body text-ink antialiased;
+  }
+
+  html.dark body {
+    @apply bg-forest-900 text-cream;
+  }
+
+  [lang="bn"] body {
+    @apply font-body-bn;
+  }
+
+  [lang="bn"] h1,
+  [lang="bn"] h2,
+  [lang="bn"] h3,
+  [lang="bn"] .font-display {
+    @apply font-display-bn;
+  }
+
+  ::selection {
+    @apply bg-gold-300 text-forest-900;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-gold-500 ring-offset-2 ring-offset-cream;
+  }
+
+  html.dark :focus-visible {
+    @apply ring-offset-forest-900;
+  }
+}
+
+@layer utilities {
+  /* Thin gold hairline, used for card borders and dividers per the crest motif */
+  .hairline-gold {
+    @apply border border-gold-500/30;
+  }
+
+  .container-club {
+    @apply mx-auto w-full max-w-[1280px] px-6 md:px-10;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.2em] text-gold-600;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
