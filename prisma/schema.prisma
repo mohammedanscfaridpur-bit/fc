@@ -1,12 +1,12 @@
 // Mohammeda Sporting Club, Faridpur — Database schema
-// Provider: MySQL (matches Hostinger's affordable Node.js-enabled hosting plans)
+// Provider: PostgreSQL (e.g. Aiven free tier)
 
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "mysql"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
@@ -198,8 +198,8 @@ model NewsPost {
   titleBn      String
   excerpt      String    @db.Text
   excerptBn    String    @db.Text
-  content      String    @db.LongText
-  contentBn    String    @db.LongText
+  content      String    @db.Text
+  contentBn    String    @db.Text
   coverImage   String?
   authorName   String?
   isPublished  Boolean   @default(false)
