@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { prisma } from "@/lib/db";
 
+export const dynamic = "force-dynamic";
+
 const staticPaths = [
   "",
   "history",
@@ -30,10 +32,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })),
   );
 
-  const posts = await prisma.newsPost.findMany({
-    where: { isPublished: true },
-    select: { slug: true, updatedAt: true },
-  });
+  let posts: { slug: string; updatedAt: Date }[] = [];
+  try {
+    posts = await prisma.newsPost.findMany({
+      where: { isPublished: true },
+      select: { slug: true, updatedAt: true },
+    });
+  } catch {
+    // DB temporarily unreachable — return the sitemap without news entries
+    // rather than failing the whole route
+  }
 
   const newsEntries: MetadataRoute.Sitemap = locales.flatMap((locale) =>
     posts.map((post) => ({
