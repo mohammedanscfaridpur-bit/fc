@@ -14,7 +14,7 @@ const int = (v: unknown) => (v === "" || v == null ? null : Number(v));
 const bool = (v: unknown) => Boolean(v);
 const date = (v: unknown) => (v ? new Date(String(v)) : null);
 
-export const resourceConfigs: Record<string, ResourceConfig> = {
+export const resourceConfigs = {
   committee: {
     model: "committeeMember",
     defaultOrderBy: { displayOrder: "asc" },
@@ -196,4 +196,4 @@ export const resourceConfigs: Record<string, ResourceConfig> = {
       displayOrder: int(v.displayOrder) ?? 0,
     }),
   },
-};
+} satisfies Record<string, ResourceConfig>;
