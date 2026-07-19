@@ -14,7 +14,7 @@ a VPS.
    - A database user with a strong password, added to that database with
      **all privileges**
    - Note the host (usually `localhost`), database name, username, password
-3. In **hPanel → Domains**, point `mohammeda-sc-faridpur.com` to this
+3. In **hPanel → Domains**, point `mohammedan-sc-faridpur.com` to this
    hosting account (if the domain was bought elsewhere, update its
    nameservers to Hostinger's, or just the A record to the hosting IP).
 
@@ -29,9 +29,9 @@ Fill in `.env`:
 
 ```
 DATABASE_URL="mysql://u123456_msc:PASSWORD@localhost:3306/u123456_msc"
-NEXTAUTH_URL="https://mohammeda-sc-faridpur.com"
+NEXTAUTH_URL="https://mohammedan-sc-faridpur.com"
 NEXTAUTH_SECRET="<run: openssl rand -base64 32>"
-NEXT_PUBLIC_SITE_URL="https://mohammeda-sc-faridpur.com"
+NEXT_PUBLIC_SITE_URL="https://mohammedan-sc-faridpur.com"
 ```
 
 Push the schema and seed the database (you can do this locally against the
@@ -43,7 +43,7 @@ npm run db:seed
 ```
 
 **Important:** log in once with the seeded admin account
-(`admin@mohammeda-sc-faridpur.com` / `ChangeMe@123`) and change the password
+(`admin@mohammedan-sc-faridpur.com` / `ChangeMe@123`) and change the password
 immediately — this is documented again in Step 6 of the README.
 
 ## 3. Build
@@ -85,7 +85,7 @@ then in hPanel's Node.js app screen set the startup file to `server.js` /
 ## 6. SSL
 
 hPanel → SSL → issue a free Let's Encrypt certificate for
-`mohammeda-sc-faridpur.com` (and `www.`). Force HTTPS redirect in the domain
+`mohammedan-sc-faridpur.com` (and `www.`). Force HTTPS redirect in the domain
 settings.
 
 ## 7. Uploaded images (gallery, committee photos)
@@ -98,7 +98,7 @@ exclude it from any "clean deploy" step.
 
 ## 8. Post-deploy checklist
 
-- [ ] Visit `https://mohammeda-sc-faridpur.com/bn` and `/en` — both load
+- [ ] Visit `https://mohammedan-sc-faridpur.com/bn` and `/en` — both load
 - [ ] Visit `/admin/login`, sign in, and change the seeded admin password
 - [ ] Submit a test entry via the Contact form and Membership form
 - [ ] Add one real President/Secretary photo + bio from the admin dashboard

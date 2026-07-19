@@ -65,7 +65,7 @@ export function SiteFooter() {
             <ul className="space-y-3 text-sm text-cream/70">
               <li className="flex items-start gap-2">
                 <MapPin size={16} className="mt-0.5 shrink-0 text-gold-400" />
-                <span>Mohammeda Sporting Club, Faridpur, Bangladesh</span>
+                <span>Mohammedan Sporting Club, Faridpur, Bangladesh</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone size={16} className="text-gold-400" />
@@ -73,7 +73,7 @@ export function SiteFooter() {
               </li>
               <li className="flex items-center gap-2">
                 <Mail size={16} className="text-gold-400" />
-                <span>info@mohammeda-sc-faridpur.com</span>
+                <span>info@mohammedan-sc-faridpur.com</span>
               </li>
             </ul>
           </div>

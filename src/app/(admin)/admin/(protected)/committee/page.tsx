@@ -10,14 +10,14 @@ export default async function AdminCommitteePage() {
   if (!session) redirect("/admin/login");
 
   const rows = await prisma.committeeMember.findMany({
-    orderBy: resourceConfigs.committee!.defaultOrderBy,
+    orderBy: resourceConfigs.committee.defaultOrderBy,
   });
 
   return (
     <ResourceManager
       resource="committee"
       title="Committee Members"
-      fields={resourceConfigs.committee!.fields}
+      fields={resourceConfigs.committee.fields}
       initialRows={rows}
       columns={[
         { key: "name", label: "Name" },

@@ -1,21 +1,5 @@
 export interface NavItem {
-  href:
-    | "/"
-    | "/history"
-    | "/activities"
-    | "/achievements"
-    | "/gallery"
-    | "/news"
-    | "/events"
-    | "/contact"
-    | "/management"
-    | "/executive-committee"
-    | "/former-presidents"
-    | "/former-secretaries"
-    | "/life-members"
-    | "/membership"
-    | "/sponsors";
-
+  href: string;
   labelKey:
     | "home"
     | "history"
@@ -33,6 +17,7 @@ export interface NavItem {
     | "sponsors"
     | "contact";
 }
+
 export const primaryNav: NavItem[] = [
   { href: "/", labelKey: "home" },
   { href: "/history", labelKey: "history" },

@@ -1,4 +1,4 @@
-# Mohammeda Sporting Club, Faridpur — Official Website
+# Mohammedan Sporting Club, Faridpur — Official Website
 
 Est. ১৯৩৬ (1936). A premium, bilingual (English / বাংলা) website with a public site
 and a secure admin dashboard for managing all club content.
@@ -22,7 +22,7 @@ and a secure admin dashboard for managing all club content.
 ## Folder structure
 
 ```
-mohammeda-sc-faridpur/
+mohammedan-sc-faridpur/
 ├── prisma/
 │   ├── schema.prisma          # (Step 3)
 │   ├── migrations/

@@ -22,7 +22,7 @@ const staticPaths = [
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const base = process.env.NEXT_PUBLIC_SITE_URL || "https://mohammeda-sc-faridpur.com";
+  const base = process.env.NEXT_PUBLIC_SITE_URL || "https://mohammedan-sc-faridpur.com";
   const locales = ["en", "bn"];
 
   const staticEntries: MetadataRoute.Sitemap = locales.flatMap((locale) =>

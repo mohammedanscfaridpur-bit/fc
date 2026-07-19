@@ -7,11 +7,11 @@ async function main() {
   // --- Admin user -----------------------------------------------------
   const passwordHash = await bcrypt.hash("ChangeMe@123", 10);
   await prisma.adminUser.upsert({
-    where: { email: "admin@mohammeda-sc-faridpur.com" },
+    where: { email: "admin@mohammedan-sc-faridpur.com" },
     update: {},
     create: {
       name: "Site Administrator",
-      email: "admin@mohammeda-sc-faridpur.com",
+      email: "admin@mohammedan-sc-faridpur.com",
       passwordHash,
       role: "SUPER_ADMIN",
     },
@@ -24,7 +24,7 @@ async function main() {
         role: LeadershipRole.PRESIDENT,
         name: "President Name",
         nameBn: "সভাপতির নাম",
-        shortBio: "President of Mohammeda Sporting Club, Faridpur.",
+        shortBio: "President of Mohammedan Sporting Club, Faridpur.",
         shortBioBn: "মোহামেডান স্পোর্টিং ক্লাব, ফরিদপুরের সভাপতি।",
         isCurrent: true,
       },
@@ -32,7 +32,7 @@ async function main() {
         role: LeadershipRole.SECRETARY,
         name: "General Secretary Name",
         nameBn: "সাধারণ সম্পাদকের নাম",
-        shortBio: "General Secretary of Mohammeda Sporting Club, Faridpur.",
+        shortBio: "General Secretary of Mohammedan Sporting Club, Faridpur.",
         shortBioBn: "মোহামেডান স্পোর্টিং ক্লাব, ফরিদপুরের সাধারণ সম্পাদক।",
         isCurrent: true,
       },
@@ -46,7 +46,7 @@ async function main() {
         year: 1936,
         title: "Club founded",
         titleBn: "ক্লাব প্রতিষ্ঠা",
-        description: "Mohammeda Sporting Club was founded in Faridpur.",
+        description: "Mohammedan Sporting Club was founded in Faridpur.",
         descriptionBn: "ফরিদপুরে মোহামেডান স্পোর্টিং ক্লাব প্রতিষ্ঠিত হয়।",
         displayOrder: 1,
       },
@@ -89,10 +89,10 @@ async function main() {
     update: {},
     create: {
       id: "main",
-      address: "Mohammeda Sporting Club, Faridpur, Bangladesh",
+      address: "Mohammedan Sporting Club, Faridpur, Bangladesh",
       addressBn: "মোহামেডান স্পোর্টিং ক্লাব, ফরিদপুর, বাংলাদেশ",
       phone: "+880-XXX-XXXXXX",
-      email: "info@mohammeda-sc-faridpur.com",
+      email: "info@mohammedan-sc-faridpur.com",
       officeHours: "Daily, 9:00 AM – 8:00 PM",
       officeHoursBn: "প্রতিদিন, সকাল ৯টা – রাত ৮টা",
     },

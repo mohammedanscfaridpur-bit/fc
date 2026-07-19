@@ -1,4 +1,4 @@
-// Mohammeda Sporting Club, Faridpur — Database schema
+// Mohammedan Sporting Club, Faridpur — Database schema
 // Provider: PostgreSQL (e.g. Aiven free tier)
 
 generator client {

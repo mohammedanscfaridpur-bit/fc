@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { Card, CardTitle, CardDescription } from "@/components/ui/card";
 
 interface PersonCardProps {

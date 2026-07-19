@@ -18,8 +18,7 @@ export async function PATCH(
   if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
   const { resource, id } = await params;
-  const config =
-  resourceConfigs[resource as keyof typeof resourceConfigs];
+  const config = resourceConfigs[resource];
   if (!config) return NextResponse.json({ error: "Unknown resource" }, { status: 404 });
 
   const body = await req.json().catch(() => ({}));
@@ -38,7 +37,7 @@ export async function DELETE(
   if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
   const { resource, id } = await params;
-  const config = resourceConfigs[resource as keyof typeof resourceConfigs];
+  const config = resourceConfigs[resource];
   if (!config) return NextResponse.json({ error: "Unknown resource" }, { status: 404 });
 
   // @ts-expect-error dynamic delegate access — model name is validated via resourceConfigs

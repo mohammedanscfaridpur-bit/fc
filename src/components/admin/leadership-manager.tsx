@@ -90,11 +90,7 @@ export function LeadershipManager({ initialRows }: { initialRows: LeadershipRow[
 
       <Modal open={!!editing} onClose={() => setEditing(null)} title={`Edit ${editing?.role ?? ""}`}>
         {editing && (
-          <AutoForm
-  fields={fields}
-  initialValues={editing as unknown as Record<string, unknown>}
-  onSubmit={handleSubmit}
-/>
+          <AutoForm fields={fields} initialValues={editing} onSubmit={handleSubmit} />
         )}
       </Modal>
     </div>

@@ -1,8 +1,8 @@
 {
-  "name": "mohammeda-sc-faridpur",
+  "name": "mohammedan-sc-faridpur",
   "version": "0.1.0",
   "private": true,
-  "description": "Official website of Mohammeda Sporting Club, Faridpur (est. 1936)",
+  "description": "Official website of Mohammedan Sporting Club, Faridpur (est. 1936)",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

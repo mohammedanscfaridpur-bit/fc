@@ -1,4 +1,4 @@
-# Design System — Mohammeda Sporting Club, Faridpur
+# Design System — Mohammedan Sporting Club, Faridpur
 
 ## 1. Concept
 

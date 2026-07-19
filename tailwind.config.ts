@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 /**
- * Design tokens — Mohammeda Sporting Club, Faridpur
+ * Design tokens — Mohammedan Sporting Club, Faridpur
  * Palette rationale documented in /docs/design-system.md (added in Step 2 — UI Design)
  */
 const config: Config = {

@@ -38,7 +38,7 @@ export default function AdminLoginPage() {
         <div className="flex flex-col items-center">
           <Image src="/images/logo/logo.png" alt="Club crest" width={56} height={56} />
           <h1 className="mt-4 font-display text-xl">Admin Login</h1>
-          <p className="text-xs text-cream/50">Mohammeda Sporting Club, Faridpur</p>
+          <p className="text-xs text-cream/50">Mohammedan Sporting Club, Faridpur</p>
         </div>
 
         <form onSubmit={onSubmit} className="mt-8 space-y-4">

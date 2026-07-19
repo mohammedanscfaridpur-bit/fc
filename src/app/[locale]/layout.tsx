@@ -11,11 +11,11 @@ import "@/styles/globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Mohammeda Sporting Club, Faridpur",
-    template: "%s | Mohammeda Sporting Club, Faridpur",
+    default: "Mohammedan Sporting Club, Faridpur",
+    template: "%s | Mohammedan Sporting Club, Faridpur",
   },
   description:
-    "Official website of Mohammeda Sporting Club, Faridpur — established 1936.",
+    "Official website of Mohammedan Sporting Club, Faridpur — established 1936.",
   icons: {
     icon: "/images/logo/logo.png",
     apple: "/images/logo/logo.png",

@@ -10,7 +10,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "mohammeda-sc-faridpur.com",
+        hostname: "mohammedan-sc-faridpur.com",
       },
     ],
     formats: ["image/avif", "image/webp"],

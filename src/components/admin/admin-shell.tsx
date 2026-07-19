@@ -43,7 +43,7 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
         <div className="flex items-center gap-3 border-b border-gold-500/10 p-5">
           <Image src="/images/logo/logo.png" alt="Club crest" width={36} height={36} />
           <span className="font-display text-sm leading-tight">
-            Mohammeda SC
+            Mohammedan SC
             <br />
             <span className="text-xs text-gold-400">Admin Dashboard</span>
           </span>
@@ -64,7 +64,7 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
         <div className="fixed inset-0 z-50 flex bg-forest-900 text-cream lg:hidden">
           <div className="flex w-full flex-col">
             <div className="flex items-center justify-between border-b border-gold-500/10 p-5">
-              <span className="font-display text-sm">Mohammeda SC Admin</span>
+              <span className="font-display text-sm">Mohammedan SC Admin</span>
               <button onClick={() => setMobileOpen(false)}>
                 <X size={20} />
               </button>

@@ -5,7 +5,7 @@ import { AuthSessionProvider } from "@/components/admin/session-provider";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
-  title: "Admin — Mohammeda Sporting Club, Faridpur",
+  title: "Admin — Mohammedan Sporting Club, Faridpur",
   robots: { index: false, follow: false },
 };
 

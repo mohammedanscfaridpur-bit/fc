@@ -18,8 +18,7 @@ export async function GET(
   if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
   const { resource } = await params;
-  const config =
-  resourceConfigs[resource as keyof typeof resourceConfigs];
+  const config = resourceConfigs[resource];
   if (!config) return NextResponse.json({ error: "Unknown resource" }, { status: 404 });
 
   // @ts-expect-error dynamic delegate access — model name is validated via resourceConfigs
@@ -35,8 +34,7 @@ export async function POST(
   if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
   const { resource } = await params;
-  const config =
-  resourceConfigs[resource as keyof typeof resourceConfigs];
+  const config = resourceConfigs[resource];
   if (!config) return NextResponse.json({ error: "Unknown resource" }, { status: 404 });
 
   const body = await req.json().catch(() => ({}));
