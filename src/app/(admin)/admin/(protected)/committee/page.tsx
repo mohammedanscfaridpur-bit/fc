@@ -17,7 +17,7 @@ export default async function AdminCommitteePage() {
     <ResourceManager
       resource="committee"
       title="Committee Members"
-      fields={resourceConfigs.committee.fields}
+      fields={resourceConfigs.committee!.fields}
       initialRows={rows}
       columns={[
         { key: "name", label: "Name" },
