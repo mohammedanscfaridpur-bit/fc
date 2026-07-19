@@ -10,7 +10,7 @@ export interface SponsorItem {
 }
 
 const tierOrder = ["TITLE", "GOLD", "SILVER", "PARTNER"] as const;
-const tierLabel: Record<string, { en: string; bn: string; size: string }> = {
+const tierLabel: Record<(typeof tierOrder)[number], { en: string; bn: string; size: string }> = {
   TITLE: { en: "Title Sponsor", bn: "টাইটেল স্পনসর", size: "h-24 w-48" },
   GOLD: { en: "Gold Sponsors", bn: "গোল্ড স্পনসর", size: "h-16 w-32" },
   SILVER: { en: "Silver Sponsors", bn: "সিলভার স্পনসর", size: "h-14 w-28" },
