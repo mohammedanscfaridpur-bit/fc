@@ -14,7 +14,15 @@ const int = (v: unknown) => (v === "" || v == null ? null : Number(v));
 const bool = (v: unknown) => Boolean(v);
 const date = (v: unknown) => (v ? new Date(String(v)) : null);
 
-export const resourceConfigs: Record<string, ResourceConfig> = {
+export type ResourceKey =
+  | "committee"
+  | "news"
+  | "events"
+  | "activities"
+  | "sponsors"
+  | "gallery";
+
+export const resourceConfigs: Record<ResourceKey, ResourceConfig> = {
   committee: {
     model: "committeeMember",
     defaultOrderBy: { displayOrder: "asc" },
@@ -197,3 +205,7 @@ export const resourceConfigs: Record<string, ResourceConfig> = {
     }),
   },
 };
+
+export function isResourceKey(key: string): key is ResourceKey {
+  return Object.prototype.hasOwnProperty.call(resourceConfigs, key);
+}

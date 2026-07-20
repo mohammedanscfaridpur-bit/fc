@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
 import { prisma } from "@/lib/db";
-import { resourceConfigs } from "@/lib/admin-resources";
+import { resourceConfigs, isResourceKey } from "@/lib/admin-resources";
 
 async function requireSession() {
   const session = await getServerSession(authOptions);
@@ -18,8 +18,10 @@ export async function PATCH(
   if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
   const { resource, id } = await params;
+  if (!isResourceKey(resource)) {
+    return NextResponse.json({ error: "Unknown resource" }, { status: 404 });
+  }
   const config = resourceConfigs[resource];
-  if (!config) return NextResponse.json({ error: "Unknown resource" }, { status: 404 });
 
   const body = await req.json().catch(() => ({}));
   const data = config.parse(body);
@@ -37,8 +39,10 @@ export async function DELETE(
   if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
   const { resource, id } = await params;
+  if (!isResourceKey(resource)) {
+    return NextResponse.json({ error: "Unknown resource" }, { status: 404 });
+  }
   const config = resourceConfigs[resource];
-  if (!config) return NextResponse.json({ error: "Unknown resource" }, { status: 404 });
 
   // @ts-expect-error dynamic delegate access — model name is validated via resourceConfigs
   await prisma[config.model].delete({ where: { id } });
