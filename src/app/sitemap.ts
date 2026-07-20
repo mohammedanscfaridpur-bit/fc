@@ -5,20 +5,14 @@ export const dynamic = "force-dynamic";
 
 const staticPaths = [
   "",
-  "history",
-  "activities",
-  "achievements",
-  "management",
-  "executive-committee",
+  "management/president",
+  "management/secretary",
   "former-presidents",
   "former-secretaries",
   "life-members",
-  "gallery",
   "events",
   "news",
   "membership",
-  "sponsors",
-  "contact",
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

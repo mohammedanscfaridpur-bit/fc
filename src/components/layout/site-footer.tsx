@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Facebook, Youtube, Instagram, MapPin, Phone, Mail } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { Container } from "@/components/shared/container";
@@ -8,6 +8,7 @@ import { footerNav } from "@/lib/nav";
 
 export function SiteFooter() {
   const t = useTranslations();
+  const locale = useLocale();
   const year = new Date().getFullYear();
 
   return (
@@ -50,11 +51,20 @@ export function SiteFooter() {
           <div>
             <p className="eyebrow mb-4 text-gold-400">{t("footer.quickLinks")}</p>
             <ul className="space-y-2 text-sm">
-              {footerNav.slice(0, 7).map((item) => (
+              {footerNav.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="hover:text-gold-300">
-                    {t(`nav.${item.labelKey}`)}
-                  </Link>
+                  {item.isAnchor ? (
+                    <a
+                      href={`/${locale}${item.href.startsWith("/") ? item.href.slice(1) : item.href}`}
+                      className="hover:text-gold-300"
+                    >
+                      {t(`nav.${item.labelKey}`)}
+                    </a>
+                  ) : (
+                    <Link href={item.href} className="hover:text-gold-300">
+                      {t(`nav.${item.labelKey}`)}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

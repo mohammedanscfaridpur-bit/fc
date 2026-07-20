@@ -4,6 +4,7 @@
 
 :root {
   color-scheme: light;
+  scroll-behavior: smooth;
 }
 
 html.dark {
@@ -32,6 +33,10 @@ html.dark {
 
   ::selection {
     @apply bg-gold-300 text-forest-900;
+  }
+
+  section[id] {
+    scroll-margin-top: 5.5rem;
   }
 
   :focus-visible {

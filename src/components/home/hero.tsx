@@ -74,7 +74,7 @@ export function Hero() {
               <Link href="/membership">{t("common.applyNow")}</Link>
             </Button>
             <Button variant="outline" size="lg" asChild>
-              <Link href="/history">{t("nav.history")}</Link>
+              <a href="#history">{t("nav.history")}</a>
             </Button>
           </motion.div>
 
